@@ -1,0 +1,8 @@
+.card {
+  width: 50%;           /* Give the card a specific width */
+  margin: auto;           /* Now 'auto' can center it */
+  padding: 2em;           /* Keep the breathing room */
+  border: 1px solid #ccc; /* Keep the border */
+  border-radius: 8px;     /* Keep the rounded corners */
+  text-align: center;     /* And center the text inside */
+}
