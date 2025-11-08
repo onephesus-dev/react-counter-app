@@ -12,6 +12,14 @@ function App() {
     setCount(count + 1);
   };
 
+  const handleIncrementBy5 = () => {
+    setCount(count + 5);
+  }
+
+  const handleIncrementBy10 = () => {
+    setCount(count + 10);
+  }
+
   const handleDecrement = () => {
     // Call setCount to decrease the count
     setCount(count - 1);
@@ -22,14 +30,23 @@ function App() {
     setCount(0);
   };
 
+  let countColorClass = ""; // Default (for 0)
+  if (count > 0) {
+    countColorClass = "positive-color";
+  } else if (count < 0) {
+    countColorClass = "negative-color";
+  }
+
   return (
     <>
       <h1>Counter App</h1>
       <div className="card">
-        <h2>Count: {count}</h2>
+        <h2 className={countColorClass}>Count: {count}</h2>
 
         <button onClick={handleIncrement}>Increment</button>
-        <button onClick={handleDecrement}>Decrement</button>
+        <button onClick={handleIncrementBy5}>Increment by 5</button>
+        <button onClick={handleIncrementBy10}>Increment by 10</button>
+        <button onClick={handleDecrement} disabled={count === 0}>Decrement</button>
         <button onClick={handleReset}>Reset</button>
       </div>
     </>
