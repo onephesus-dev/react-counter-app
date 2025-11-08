@@ -6,3 +6,11 @@
   border-radius: 8px;     /* Keep the rounded corners */
   text-align: center;     /* And center the text inside */
 }
+
+.positive-color {
+  color: green;
+}
+
+.negative-color {
+  color: red;
+}
